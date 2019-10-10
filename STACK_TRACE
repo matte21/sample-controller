@@ -1,24 +1,23 @@
-goroutine 13 [running]:
-runtime/debug.Stack(0x0, 0x0, 0x0)
-	/usr/local/go/src/runtime/debug/stack.go:24 +0x9d
-runtime/debug.PrintStack()
-	/usr/local/go/src/runtime/debug/stack.go:16 +0x22
-k8s.io/client-go/tools/cache.(*ListWatch).List.func1(0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x140efa7, ...)
-	/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/cache/listwatch.go:108 +0x40
-k8s.io/client-go/tools/pager.SimplePageFunc.func1(0x1626fa0, 0xc00009c210, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
-	/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/pager/pager.go:40 +0x64
-k8s.io/client-go/tools/pager.(*ListPager).List(0xc0000a0bc0, 0x1626fa0, 0xc00009c210, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
-	/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/pager/pager.go:88 +0x12d
-k8s.io/client-go/tools/cache.(*ListWatch).List(0xc0002cbc80, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
-	/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/cache/listwatch.go:111 +0x124
-k8s.io/client-go/tools/cache.(*Reflector).ListAndWatch.func1.1.2(0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x140efa7, ...)
-	/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/cache/reflector.go:209 +0x72
-k8s.io/client-go/tools/pager.SimplePageFunc.func1(0x1626fa0, 0xc00009c208, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
-	/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/pager/pager.go:40 +0x64
-k8s.io/client-go/tools/pager.(*ListPager).List(0xc0000a0f10, 0x1626fa0, 0xc00009c208, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
-	/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/pager/pager.go:88 +0x12d
-k8s.io/client-go/tools/cache.(*Reflector).ListAndWatch.func1.1(0xc00007c5a0, 0xc00003c630, 0xc00033a180, 0xc00003a160, 0xc00003a170, 0xc000334300)
-	/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/cache/reflector.go:215 +0x190
-created by k8s.io/client-go/tools/cache.(*Reflector).ListAndWatch.func1
-	/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/cache/reflector.go:200 +0x29d
-
+ 1: goroutine 13 [running]:
+ 2: runtime/debug.Stack(0x0, 0x0, 0x0)
+ 3:		/usr/local/go/src/runtime/debug/stack.go:24 +0x9d
+ 4: runtime/debug.PrintStack()
+ 5: 	/usr/local/go/src/runtime/debug/stack.go:16 +0x22
+ 6: k8s.io/client-go/tools/cache.(*ListWatch).List.func1(0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x140efa7, ...)
+ 7:		/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/cache/listwatch.go:108 +0x40
+ 8: k8s.io/client-go/tools/pager.SimplePageFunc.func1(0x1626fa0, 0xc00009c210, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+ 9:		/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/pager/pager.go:40 +0x64
+10: k8s.io/client-go/tools/pager.(*ListPager).List(0xc0000a0bc0, 0x1626fa0, 0xc00009c210, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+11:		/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/pager/pager.go:88 +0x12d
+12: k8s.io/client-go/tools/cache.(*ListWatch).List(0xc0002cbc80, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+13:		/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/cache/listwatch.go:111 +0x124
+14: k8s.io/client-go/tools/cache.(*Reflector).ListAndWatch.func1.1.2(0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x140efa7, ...)
+15:		/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/cache/reflector.go:209 +0x72
+16: k8s.io/client-go/tools/pager.SimplePageFunc.func1(0x1626fa0, 0xc00009c208, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+17:		/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/pager/pager.go:40 +0x64
+18: k8s.io/client-go/tools/pager.(*ListPager).List(0xc0000a0f10, 0x1626fa0, 0xc00009c208, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+19:		/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/pager/pager.go:88 +0x12d
+20: k8s.io/client-go/tools/cache.(*Reflector).ListAndWatch.func1.1(0xc00007c5a0, 0xc00003c630, 0xc00033a180, 0xc00003a160, 0xc00003a170, 0xc000334300)
+21:		/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/cache/reflector.go:215 +0x190
+22: created by k8s.io/client-go/tools/cache.(*Reflector).ListAndWatch.func1
+23:		/Users/matteo/debug-double-paging/sample-controller/vendor/k8s.io/client-go/tools/cache/reflector.go:200 +0x29d
