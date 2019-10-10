@@ -1,0 +1,32 @@
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+  name: debug-sample-controller
+  namespace: default
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: foos-reader
+rules:
+- apiGroups:
+  - samplecontroller.k8s.io
+  resources:
+  - foos
+  verbs:
+  - get
+  - list
+  - watch
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: foos-reader
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: foos-reader
+subjects:
+- kind: ServiceAccount
+  name: debug-sample-controller
+  namespace: default

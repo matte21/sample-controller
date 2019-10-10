@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: debug-sample-controller
+  labels:
+    app: debug-sample-controller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: debug-sample-controller
+  template:
+    metadata:
+      labels:
+        app: debug-sample-controller
+    spec:
+      containers:
+      - name: debug-sample-controller
+        image: mattedocker/k8s-debug-sample-controller:latest
+        imagePullPolicy: Always
